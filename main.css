@@ -1,0 +1,192 @@
+/*Paleta de colores*/
+
+:root{ 
+    --colorMain: #EAD41C;
+    --colorSecond: #000;
+    --colorExt: #fff;
+}
+
+/*Reeseteo de estilos predeterminados*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    direction: none;
+	text-decoration: none;
+    color: var(--colorExt);
+    font-family: sans-serif;
+}
+
+/*Container*/
+
+#container {
+    display: grid;
+    grid-template-columns: 2;
+    background-color: var(--colorSecond);
+}
+
+/*nav diseño*/
+
+#navbar{
+    position: fixed;
+    width: 20%;
+    justify-self: start;
+}
+
+#navbar header {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0px;
+    font-size: 30px;
+    color: var(--colorMain);
+}
+
+#navbar ul{
+    width: 100%;
+    display: grid;
+}
+
+#navbar ul li{
+    width: 100%;
+    display: flex;
+}
+
+#navbar ul li .nav-link{
+    width: 100%;
+    padding: 20px 0px;
+    padding-left: 10%;
+    border-bottom: solid 1px var(--colorExt);
+    transition: 0.3s;
+}
+
+#navbar ul li .nav-link:hover {
+    background-color: var(--colorMain);
+    color: var(--colorSecond);
+    padding: 25px 0px;
+    padding-left: 12%;
+}
+
+
+/*Main diseño*/
+
+#main-doc {
+    width:  80%;
+    justify-self: end;
+}
+
+#main-doc section {
+    padding: 30px 0px;
+    width: 80%;
+    margin: auto;
+}
+
+#main-doc section header{
+    padding: 15px 0px;
+    font-size: 28px;
+    color: var(--colorMain);
+}
+
+#main-doc section header, p, ul{
+    width: 100%;
+    margin: auto;
+}
+
+#main-doc section ul li {
+    width: 95%;
+    margin: auto;
+}
+
+code{
+    width: 100%;
+    height: 100%;
+    font-style: italic;
+    background-color: var(--colorMain);
+    color: var(--colorSecond);
+}
+
+p{
+    margin: 10px 0px;
+    padding: 20px 0px;
+}
+
+#main-doc section p{
+    padding: 6px 0px;
+    font-size: 17px;
+    text-align: justify;
+}
+
+#main-doc section ul li{
+    padding: 5px 0px
+}
+
+
+#refer:hover {
+    color: var(--colorMain);
+}
+/*Diseño responsivo 6.5"*/
+
+@media (max-width: 412px) {
+    #container {
+        display: grid;
+        grid-template-columns: 1;
+        background-color: var(--colorSecond);
+    }
+    
+    /*nav diseño*/
+    
+    #navbar{
+        width: 100%;
+        background-color: var(--colorSecond);
+    }
+
+    #main-doc {
+        width:  100%;
+    }
+
+    #navbar ul{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #navbar ul li {
+        width: 100%;
+    }
+
+    #navbar ul li .nav-link{
+        width: 100%;
+        padding: 5px 0px;
+        padding-left: 10%;
+        border: solid 1px var(--colorExt);
+        transition: 0.3s;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    #navbar ul li .nav-link:hover {
+        background-color: var(--colorMain);
+        color: var(--colorSecond);
+        padding: 10px 0px;
+        padding-left: 12%;
+    }
+
+    #center-li {
+        justify-self: center;
+        align-self: center;
+    }
+    
+    #main-doc section {
+        padding-top: 250px;
+    }
+
+    #main-doc section header{
+        font-size: 24px;
+    }
+
+    #navbar header {
+        font-size: 26px;
+    }
+}
