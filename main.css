@@ -125,7 +125,7 @@ p{
 }
 /*Diseño responsivo 6.5"*/
 
-@media (max-width: 412px) {
+@media (max-width: 700px) {
     #container {
         display: grid;
         grid-template-columns: 1;
